@@ -1,0 +1,488 @@
+/************************************************** NAVBAR **************************************************/
+.navbar {
+  background-color: rgb(226, 221, 221);
+}
+.nav-item {
+  margin-right: 5px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: coral;
+  margin: auto;
+  display: block;
+}
+.nav-link:hover::after {
+  width: 100%;
+  transition: 0.5s;
+}
+.sign-in {
+  background-color: rgb(15, 97, 165);
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  transition: 0.4s;
+}
+.sign-in:hover {
+  background-color: coral;
+}
+.navbar .img {
+  height: 50px;
+}
+
+.fa-moon {
+  margin-right: 10px;
+}
+/************************************************** HOME **************************************************/
+.cont1 {
+  padding-top: 250px;
+}
+.home {
+  background-color: rgb(226, 221, 221);
+}
+.title h1 {
+  font-weight: bolder;
+  font-size: 50px;
+}
+.title span {
+  color: coral;
+}
+.ferrari-img {
+  width: 100%;
+}
+.store img {
+  width: 20%;
+}
+/************************************************** RIDE **************************************************/
+.fa-pen-to-square,
+.fa-clipboard,
+.fa-car-side {
+  color: rgb(209, 99, 59);
+  font-size: 30px;
+}
+#ride .card {
+  background-color: rgb(243, 201, 186);
+  border-radius: 20px;
+  border-style: none;
+  height: 240px;
+}
+#ride p {
+  font-size: 20px;
+}
+#ride {
+  padding-top: 90px;
+}
+.date-voiture {
+  border: 2px solid black;
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 10px;
+}
+/************************************************** SERVICES ***************************************************/
+#services .card-text {
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(235, 89, 37);
+}
+
+#services .card-title {
+  font-size: 25px;
+}
+
+#services h1 {
+  padding-top: 90px;
+  padding-bottom: 20px;
+}
+
+#services .container .btn {
+  background-color: rgb(15, 97, 165);
+  color: white;
+  font-weight: bold;
+  border-style: none;
+}
+
+#services .container .btn:hover {
+  background-color: coral;
+  color: black;
+}
+
+#about h1 {
+  padding-top: 90px;
+}
+
+#about h3 {
+  color: rgb(235, 89, 37);
+}
+#about p {
+  font-size: 18px;
+  font-weight: 400;
+}
+/************************************************** REVIEWS **************************************************/
+#reviews h3 {
+  padding-top: 90px;
+}
+
+.prof-pic {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50px;
+  border: 3px solid coral;
+}
+.fa-star,
+.fa-star-half-stroke {
+  color: coral;
+  font-size: 20px;
+}
+
+#reviews .card {
+  border-style: none;
+  box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.4);
+}
+/************************************************** NEWSLETTER **************************************************/
+.Newsletter {
+  margin-top: 90px;
+  background-color: coral;
+}
+
+.Newsletter .btn {
+  background-color: rgb(15, 97, 165);
+  color: white;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.Newsletter h3 {
+  font-weight: bold;
+}
+
+.Newsletter .container div {
+  padding: 30px;
+}
+.Newsletter .btn:hover {
+  opacity: 0.8;
+}
+/************************************************** FOOTER **************************************************/
+#socials {
+  margin-right: 10px;
+}
+
+.logos div {
+  font-size: 20px;
+}
+
+body {
+  color: #333;
+}
+
+.terms a,
+.payment a {
+  text-decoration: none;
+  font-weight: 500;
+}
+.terms a:hover,
+.payment a:hover {
+  text-decoration: underline;
+}
+.payment a {
+  margin-left: 15px;
+}
+/************************************************** DARK MODE **************************************************/
+
+/* Dark Mode Style */
+
+html[data-theme="dark"] .home {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+html[data-theme="dark"] body {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+html[data-theme="dark"] .card {
+  background-color: #333;
+  color: #f0f0f0;
+}
+html[data-theme="dark"] #ride .card {
+  background-color: #5e5c5c;
+  color: #f0f0f0;
+}
+html[data-theme="dark"] .navbar {
+  background-color: #777777;
+  color: #f0f0f0;
+}
+
+html[data-theme="dark"] .fa-sun {
+  color: white;
+}
+
+html[data-theme="dark"] .fa-moon {
+  color: black;
+}
+
+html[data-theme="dark"] .box input {
+  color: white;
+}
+
+html[data-theme="dark"] .date-voiture {
+  border-color: white;
+}
+
+/* Switch Style */
+
+.theme-switch input[type="checkbox"] {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  border-radius: 30px;
+  cursor: pointer;
+  height: 16px;
+  margin: 0 8px;
+  position: relative;
+  width: 32px;
+}
+
+.slider:before {
+  background-color: white;
+  border-radius: 50%;
+  content: "";
+  height: 12px;
+  left: 2px;
+  position: absolute;
+  top: 2px;
+  transition: transform 0.2s ease-in-out;
+  width: 12px;
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+/*************************************************** LOGIN FORM ***************************************************/
+
+.box {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-top: -220px;
+  margin-left: -200px;
+  display: flex;
+  align-items: center;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform 0.8s ease, height 0.2s ease, 0.5s;
+}
+
+.box:hover {
+  box-shadow: 0 0 60px coral;
+}
+
+.box.active-btn {
+  transform: scale(1);
+  position: absolute;
+  margin-top: -220px;
+  margin-left: -200px;
+}
+
+.box.active {
+  height: 530px;
+}
+
+.box .form-box {
+  width: 100%;
+  padding: 40px;
+}
+
+.box .form-box.login {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.box.active .form-box.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.box .form-box.register {
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+}
+
+.box.active .form-box.register {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.box .icon-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background-color: rgb(165, 64, 27);
+  font-size: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.form-box h2 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+  border-bottom: 2px solid black;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 19px;
+  line-height: 50px;
+}
+
+.remember-forgot {
+  font-size: 15px;
+  font-weight: 500;
+  margin: -15px 0px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.remember-forgot input {
+  margin-right: 2px;
+  accent-color: coral;
+  width: 20px;
+  height: 20px;
+  vertical-align: top;
+}
+
+.remember-forgot a {
+  color: rgb(165, 64, 27);
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.logBtn {
+  width: 100%;
+  height: 45px;
+  background: coral;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.logBtn:hover {
+  opacity: 0.7;
+}
+
+.login-register {
+  font-size: 15px;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 25px;
+}
+
+.login-register p a {
+  color: rgb(165, 64, 27);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-register p a:hover {
+  text-decoration: underline;
+}
+
+/*************************************************** SCROLL PROGRESS ***************************************************/
+
+#progress {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  bottom: 50px;
+  right: 40px;
+
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+#progress-value {
+  height: calc(100% - 15px);
+  width: calc(100% - 15px);
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-arrow-up {
+  font-size: 25px;
+  color: black;
+}

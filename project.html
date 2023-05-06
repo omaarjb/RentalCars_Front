@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="project.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!--************************************************** NAVBAR **************************************************-->
+    <nav class="navbar navbar-expand-md py-3 fixed-top">
+      <div class="container">
+        <img class="img" src="jeep.png" alt="" />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav-menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-between fs-5"
+          id="nav-menu"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#ride" class="nav-link">Ride</a>
+            </li>
+            <li class="nav-item">
+              <a href="#services" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#reviews" class="nav-link">Reviews</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <i class="fa-regular fa-sun"></i>
+            <div>
+              <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider"></div>
+              </label>
+            </div>
+            <i class="fa-solid fa-moon"></i>
+            <button class="btn sign-in">Sign in</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!--************************************************** HOME **************************************************-->
+      <section class="home min-vh-100">
+        <div class="container cont1">
+          <div class="d-lg-flex justify-content-between">
+            <div class="title">
+              <h1>
+                <span>Looking</span> to <br />
+                rent a car ?
+              </h1>
+              <p class="lead">Download our app right now to explore more !</p>
+              <div class="store">
+                <a href="https://play.google.com/store/" target="_blank"
+                  ><img src="img/512x512.png" alt=""
+                /></a>
+                <a href="https://www.apple.com/app-store/" target="_blank"
+                  ><img src="img/ios.png" alt=""
+                /></a>
+              </div>
+            </div>
+            <div>
+              <img
+                class="ferrari-img"
+                src="https://starpng.com/public/uploads/preview/orange-car-png-car-png-transparent-101576921091osjxvr0ad4.png"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--************************************************** RIDE **************************************************-->
+      <section id="ride" class="min-vh-100">
+        <div class="container">
+          <div class="heading">
+            <h3 class="text-center">HOW IT WORKS</h3>
+            <h1 class="text-center fw-bold pb-5">Rent With 3 Easy Steps !</h1>
+          </div>
+
+          <div class="row text-center pt-5 ride">
+            <div class="col-lg g-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <div class="mb-3">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </div>
+                  <h3 class="pt-2">Fill The Form</h3>
+                  <p class="card-text">
+                    Sign in to your account , if you don't have one you need to
+                    sign up . <br />
+                    Then fill the form and enter your informations .
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg g-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <div class="mb-3">
+                    <i class="fa-regular fa-clipboard"></i>
+                  </div>
+                  <h3 class="pt-2">Pick-Up Date</h3>
+                  <p class="card-text">
+                    Choose when you want the car (date and time) !
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg g-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <div class="mb-3">
+                    <i class="fa-solid fa-car-side"></i>
+                  </div>
+                  <h3 class="pt-2">Book A Car</h3>
+                  <p class="card-text">
+                    Choose when you want the car (date and time) !
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--************************************************** SERVICES **************************************************-->
+      <section id="services" class="min-vh-100">
+        <div class="container">
+          <div class="heading">
+            <h1 class="text-center fw-bold">
+              Explore Our Top Deals With The Best Services
+            </h1>
+          </div>
+
+          <div class="row g-3 services">
+            <div class="col-lg">
+              <div class="card">
+                <img
+                  src="https://cdn.motor1.com/images/mgl/ZLvr2/s3/2017-renault-clio.jpg"
+                  class="card-img-top custom-img-size"
+                />
+                <div class="card-body">
+                  <h2 class="card-title">Clio 4</h2>
+                  <h4 class="date-voiture">2020</h4>
+                  <p class="card-text">300 Dhs/jr</p>
+                  <div class="text-center">
+                    <a
+                      href="#"
+                      class="btn btn-secondary btn-lg"
+                      style="width: 100%"
+                      >Rent Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg">
+              <div class="card">
+                <img
+                  src="https://i.ytimg.com/vi/oFp35SVhLuo/maxresdefault.jpg"
+                  class="card-img-top custom-img-size"
+                />
+                <div class="card-body">
+                  <h2 class="card-title">Range Rover Evoque</h2>
+                  <h4 class="date-voiture">2022</h4>
+                  <p class="card-text">500 Dhs/jr</p>
+                  <div class="text-center">
+                    <a
+                      href="#"
+                      class="btn btn-secondary btn-lg"
+                      style="width: 100%"
+                      >Rent Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg">
+              <div class="card">
+                <img
+                  src="https://www.topgear.com/sites/default/files/cars-car/image/2020/01/vd_230_accion_11.jpg?w=1280&h=720"
+                  class="card-img-top custom-img-size"
+                />
+                <div class="card-body">
+                  <h2 class="card-title">Seat Leon Fr</h2>
+                  <h4 class="date-voiture">2021</h4>
+                  <p class="card-text">350 Dhs/jr</p>
+                  <div class="text-center">
+                    <a
+                      href="#"
+                      class="btn btn-secondary btn-lg"
+                      style="width: 100%"
+                      >Rent Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-3 pt-3 pt-lg-5 services">
+            <div class="col-lg">
+              <div class="card">
+                <img
+                  src="https://i.ytimg.com/vi/XyLux-72ksQ/maxresdefault.jpg"
+                  class="card-img-top custom-img-size"
+                />
+                <div class="card-body">
+                  <h2 class="card-title">Porshe Cayenne</h2>
+                  <h4 class="date-voiture">2021</h4>
+                  <p class="card-text">600 Dhs/jr</p>
+                  <div class="text-center">
+                    <a
+                      href="#"
+                      class="btn btn-secondary btn-lg"
+                      style="width: 100%"
+                      >Rent Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg">
+              <div class="card">
+                <img
+                  src="https://www.topgear.com/sites/default/files/cars-car/image/2015/11/1fiat500.jpg?w=1280&h=720"
+                  class="card-img-top custom-img-size"
+                />
+                <div class="card-body">
+                  <h2 class="card-title">Fiat 500</h2>
+                  <h4 class="date-voiture">2023</h4>
+                  <p class="card-text">300 Dhs/jr</p>
+                  <div class="text-center">
+                    <a
+                      href="#"
+                      class="btn btn-secondary btn-lg"
+                      style="width: 100%"
+                      >Rent Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg">
+              <div class="card">
+                <img
+                  src="https://www.topgear.com/sites/default/files/cars-car/image/2019/04/19c0226_067_0.jpg?w=1280&h=720"
+                  class="card-img-top custom-img-size"
+                />
+                <div class="card-body">
+                  <h2 class="card-title">Mercedes CLA</h2>
+                  <h4 class="date-voiture">2022</h4>
+                  <p class="card-text">500 Dhs/jr</p>
+                  <div class="text-center">
+                    <a
+                      href="#"
+                      class="btn btn-secondary btn-lg"
+                      style="width: 100%"
+                      >Rent Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg"></div>
+            <div class="col-lg"></div>
+            <div class="col-lg"></div>
+          </div>
+        </div>
+      </section>
+      <!--************************************************** ABOUT **************************************************-->
+      <section id="about" class="min-vh-100">
+        <div class="container">
+          <div class="heading">
+            <h1 class="text-center">Best Customer Experience</h1>
+          </div>
+
+          <div class="d-lg-flex about">
+            <div class="flex-lg w-100">
+              <img class="img-fluid" src="img/about.png" alt="" />
+            </div>
+            <div class="flex-lg w-100">
+              <h3 class="text-center text-lg-start">ABOUT US</h3>
+              <p class="text-center text-lg-start">
+                Welcome to our rental car website! We are a team of dedicated
+                professionals who are committed to providing our customers with
+                top-notch car rental services at affordable prices. Our goal is
+                to make your travel experience as smooth and comfortable as
+                possible.
+                <br />
+
+                We have a wide range of vehicles to choose from, ranging from
+                compact cars to luxury sedans, SUVs, and vans. Whether you're
+                travelling for business or pleasure, we have the perfect vehicle
+                to suit your needs. Our cars are well-maintained, clean, and
+                reliable, so you can rest assured that you'll have a safe and
+                enjoyable trip.
+                <br />
+
+                At our rental car company, we believe in putting our customers
+                first. That's why we offer a range of services to make your
+                rental experience as easy and stress-free as possible. From
+                online booking to flexible pick-up and drop-off options, we
+                strive to make renting a car as simple and convenient as
+                possible. <br />
+
+                With years of experience in the car rental industry, we
+                understand what our customers need and we go above and beyond to
+                deliver exceptional service. We pride ourselves on our friendly
+                and knowledgeable staff, who are always available to answer any
+                questions you may have and provide you with the best rental car
+                experience possible. <br />
+
+                Thank you for choosing our rental car website. We look forward
+                to serving you and making your travel experience unforgettable!
+              </p>
+              <div class="text-center">
+                <a href="#" class="btn sign-in">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--************************************************** REVIEWS **************************************************-->
+      <section id="reviews" class="min-vh-100">
+        <div class="container">
+          <div class="heading">
+            <h3 class="text-center">REVIEWS</h3>
+            <h1 class="text-center">What Our Customers Say</h1>
+          </div>
+
+          <div class="row text-center g-5 pt-5 reviews">
+            <div class="col-lg">
+              <div class="card">
+                <div class="card-body text-center">
+                  <div>
+                    <img class="prof-pic" src="img/IMG_1177.JPG" alt="" />
+                  </div>
+                  <h3 class="card-title pt-2">Omar</h3>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <p class="card-text mt-2">
+                    I rented a car and had an excellent experience. The staff
+                    was friendly and efficient, and the rental process was quick
+                    and easy. The car I rented was in great condition and drove
+                    smoothly. I appreciated that they offered a range of car
+                    options at affordable prices. The rental process was
+                    straightforward and easy, with no unexpected fees or
+                    charges. The staff was friendly and knowledgeable.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg">
+              <div class="card">
+                <div class="card-body text-center">
+                  <div>
+                    <img class="prof-pic" src="img/rev3.jpg" alt="" />
+                  </div>
+                  <h3 class="card-title pt-2">Chaima</h3>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <p class="card-text mt-2">
+                    I recently rented a car from this company and was overall
+                    very satisfied with my experience. The rental process was
+                    smooth and efficient, and the staff was helpful and
+                    friendly. Additionally, I found that the car was not as
+                    fuel-efficient as I had hoped, which ended up costing me a
+                    bit more in gas than I had budgeted for. Despite these minor
+                    issues, I would still recommend this company to others in
+                    need of a rental car.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg">
+              <div class="card">
+                <div class="card-body text-center">
+                  <div>
+                    <img class="prof-pic" src="img/rev2.jpg" alt="" />
+                  </div>
+                  <h3 class="card-title pt-2">Karim</h3>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                  <p class="card-text mt-2">
+                    I recently rented a car and had an outstanding experience.
+                    The rental staff was friendly and efficient, making the
+                    entire process quick and easy. The car I rented was in
+                    excellent condition and drove smoothly, which made my trip
+                    even more enjoyable. I was impressed with the range of
+                    affordable car options they offered, which made it easy to
+                    find one that suited my needs.I appreciated the
+                    straightforward and transparent rental process.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row text-center g-5 pt-5 reviews">
+            <div class="col-lg">
+              <div class="card">
+                <div class="card-body text-center">
+                  <div>
+                    <img
+                      class="prof-pic"
+                      src="img/istockphoto-846730696-170667a.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <h3 class="card-title pt-2">Maria</h3>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <p class="card-text mt-2">
+                    "I rented a car from this company for a weekend trip and was
+                    impressed with the overall experience. The car was clean and
+                    well-maintained, and the rental process was quick and easy.
+                    The staff was friendly and knowledgeable, and answered all
+                    my questions.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg">
+              <div class="card">
+                <div class="card-body text-center">
+                  <div>
+                    <img
+                      class="prof-pic"
+                      src="img/portrait-blonde-woman-looking-photographer_23-2148348970.avif"
+                      alt=""
+                    />
+                  </div>
+                  <h3 class="card-title pt-2">Imane</h3>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <p class="card-text mt-2">
+                    I rented a car from this company for a weekend trip and had
+                    a mixed experience. While the car itself was in good
+                    condition and drove well, the rental process was a bit
+                    disorganized. The staff seemed overwhelmed and there was a
+                    long wait before I was able to get the keys.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg">
+              <div class="card">
+                <div class="card-body text-center">
+                  <div>
+                    <img
+                      class="prof-pic"
+                      src="img/photo-1563093903-b828a8f94adf.jpeg"
+                      alt=""
+                    />
+                  </div>
+                  <h3 class="card-title pt-2">Khawla</h3>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                  <p class="card-text mt-2">
+                    I rented a car from this company for a weekend getaway and
+                    had a decent experience overall. The car was clean and in
+                    good condition, and the rental process was straightforward.
+                    However, the staff at the rental location seemed a bit
+                    disorganized and not very friendly.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--************************************************** NEWSLETTER **************************************************-->
+      <section class="Newsletter">
+        <div class="container">
+          <form id="newsletter-form">
+            <div
+              class="d-lg-flex align-items-center justify-content-between newsletter"
+            >
+              <div class="flex-lg w-100">
+                <h3 class="text-center text-lg-start text-light">
+                  Sign Up For Our Newsletter
+                </h3>
+              </div>
+              <div class="flex-lg w-100 input-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email"
+                  aria-label="Recipient's username"
+                  aria-describedby="button-addon2"
+                  required
+                />
+                <button class="btn" type="submit" id="button-addon2">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!--************************************************** LOGIN FORM **************************************************-->
+    <div class="container">
+      <div class="box">
+        <span class="icon-close"><i class="fa-solid fa-xmark"></i></span>
+        <div class="form-box login">
+          <h2>Login</h2>
+          <form id="log">
+            <div class="input-box">
+              <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+              <input type="email" id="email1" required />
+              <label for="email1" id="mail">Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><i class="fa-solid fa-lock"></i></span>
+              <input type="password" id="password1" required />
+              <label for="password1">Password</label>
+            </div>
+            <div class="remember-forgot">
+              <div>
+                <input type="checkbox" id="forgot1" />
+                <label for="forgot1">Remember me</label>
+              </div>
+              <a href="/password-reset">Forgot Password ?</a>
+            </div>
+            <button type="submit" class="logBtn">Login</button>
+            <div class="login-register">
+              <p>
+                Don't have an account ?
+                <a href="#" class="register-link">Register</a>
+              </p>
+            </div>
+          </form>
+        </div>
+
+        <div class="form-box register">
+          <h2>Registration</h2>
+          <form id="reg">
+            <div class="input-box">
+              <span class="icon"><i class="fa-solid fa-user"></i></span>
+              <input type="text" id="username" required />
+              <label for="username" id="username">Username</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+              <input type="email" id="email2" required />
+              <label for="email2" id="mail">Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><i class="fa-solid fa-lock"></i></span>
+              <input type="password" id="password2" required />
+              <label for="password2">Password</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><i class="fa-solid fa-lock"></i></span>
+              <input type="password" id="ConfirmPassword" required />
+              <label for="ConfirmPassword">Confirm Password</label>
+            </div>
+            <div class="remember-forgot">
+              <div>
+                <input type="checkbox" id="forgot2" />
+                <label for="forgot2">I agree to the terms & conditions</label>
+              </div>
+            </div>
+            <button type="submit" class="logBtn">Register</button>
+            <div class="login-register">
+              <p>
+                Already have an account ?
+                <a href="#" class="login-link">Login</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--************************************************** SCROLL PROGRESS **************************************************-->
+    <div class="container">
+      <div id="progress">
+        <div id="progress-value">
+          <i class="fa-solid fa-arrow-up"></i>
+        </div>
+      </div>
+    </div>
+
+    <!--************************************************** FOOTER **************************************************-->
+    <footer>
+      <section class="copyrights p-4">
+        <div class="container">
+          <div class="d-flex justify-content-between">
+            <div>
+              <div class="d-flex">
+                <div class="terms">
+                  <a href="terms-of-use.html" target="_blank">Terms Of Use</a>
+                </div>
+                <div class="payment">
+                  <a href="payment.html">Payment Methods</a>
+                </div>
+              </div>
+
+              <i class="fa-regular fa-copyright"></i> All rights reserved
+              <span><b>O.JB</b> </span>
+            </div>
+            <div class="d-flex logos">
+              <div id="socials">
+                <a href="https://facebook.com" target="_blank"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+              </div>
+              <div id="socials">
+                <a href="https://instagram.com" target="_blank"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </div>
+              <div>
+                <a href="https://twitter.com" target="_blank"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <!--************************************************** SCROLL **************************************************-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="project.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
+      integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
