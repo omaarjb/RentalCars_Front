@@ -23,7 +23,8 @@
     <!--************************************************** NAVBAR **************************************************-->
     <nav class="navbar navbar-expand-md py-3 fixed-top">
       <div class="container">
-        <img class="img" src="jeep.png" alt="" />
+        <a href="#"><img class="img" src="jeep.png" alt="" /></a>
+
         <button
           class="navbar-toggler"
           type="button"
@@ -174,7 +175,7 @@
                   <p class="card-text">300 Dhs/jr</p>
                   <div class="text-center">
                     <a
-                      href="#"
+                      href="Rent.html"
                       class="btn btn-secondary btn-lg"
                       style="width: 100%"
                       >Rent Now</a
@@ -195,7 +196,7 @@
                   <p class="card-text">500 Dhs/jr</p>
                   <div class="text-center">
                     <a
-                      href="#"
+                      href="Rent.html"
                       class="btn btn-secondary btn-lg"
                       style="width: 100%"
                       >Rent Now</a
@@ -216,7 +217,7 @@
                   <p class="card-text">350 Dhs/jr</p>
                   <div class="text-center">
                     <a
-                      href="#"
+                      href="Rent.html"
                       class="btn btn-secondary btn-lg"
                       style="width: 100%"
                       >Rent Now</a
@@ -239,7 +240,7 @@
                   <p class="card-text">600 Dhs/jr</p>
                   <div class="text-center">
                     <a
-                      href="#"
+                      href="Rent.html"
                       class="btn btn-secondary btn-lg"
                       style="width: 100%"
                       >Rent Now</a
@@ -260,7 +261,7 @@
                   <p class="card-text">300 Dhs/jr</p>
                   <div class="text-center">
                     <a
-                      href="#"
+                      href="Rent.html"
                       class="btn btn-secondary btn-lg"
                       style="width: 100%"
                       >Rent Now</a
@@ -281,7 +282,7 @@
                   <p class="card-text">500 Dhs/jr</p>
                   <div class="text-center">
                     <a
-                      href="#"
+                      href="Rent.html"
                       class="btn btn-secondary btn-lg"
                       style="width: 100%"
                       >Rent Now</a
@@ -290,11 +291,6 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-lg"></div>
-            <div class="col-lg"></div>
-            <div class="col-lg"></div>
           </div>
         </div>
       </section>
@@ -550,7 +546,7 @@
         <span class="icon-close"><i class="fa-solid fa-xmark"></i></span>
         <div class="form-box login">
           <h2>Login</h2>
-          <form id="log">
+          <form id="log" onsubmit="return login_()">
             <div class="input-box">
               <span class="icon"><i class="fa-solid fa-envelope"></i></span>
               <input type="email" id="email1" required />
@@ -563,12 +559,19 @@
             </div>
             <div class="remember-forgot">
               <div>
-                <input type="checkbox" id="forgot1" />
-                <label for="forgot1">Remember me</label>
+                <input onclick="showPass()" type="checkbox" id="show" />
+                <label for="show">Show Password</label><br />
               </div>
               <a href="/password-reset">Forgot Password ?</a>
             </div>
-            <button type="submit" class="logBtn">Login</button>
+            <span id="s4"></span>
+            <input
+              onclick="login_()"
+              type="submit"
+              value="Login"
+              class="logBtn"
+            />
+
             <div class="login-register">
               <p>
                 Don't have an account ?
@@ -595,19 +598,25 @@
               <span class="icon"><i class="fa-solid fa-lock"></i></span>
               <input type="password" id="password2" required />
               <label for="password2">Password</label>
+              <span id="s1"></span>
             </div>
             <div class="input-box">
               <span class="icon"><i class="fa-solid fa-lock"></i></span>
               <input type="password" id="ConfirmPassword" required />
               <label for="ConfirmPassword">Confirm Password</label>
+              <span id="s2"></span>
             </div>
             <div class="remember-forgot">
               <div>
-                <input type="checkbox" id="forgot2" />
-                <label for="forgot2">I agree to the terms & conditions</label>
+                <input type="checkbox" id="check" />
+                <label for="forgot2">I agree to the terms & conditions</label
+                ><br />
+                <span id="s3"></span>
               </div>
             </div>
-            <button type="submit" class="logBtn">Register</button>
+            <button onclick="add()" type="submit" class="logBtn">
+              Register
+            </button>
             <div class="login-register">
               <p>
                 Already have an account ?
@@ -632,7 +641,7 @@
     <footer>
       <section class="copyrights p-4">
         <div class="container">
-          <div class="d-flex justify-content-between">
+          <div class="d-md-flex justify-content-between">
             <div>
               <div class="d-flex">
                 <div class="terms">
@@ -642,11 +651,15 @@
                   <a href="payment.html" target="_blank">Payment Methods</a>
                 </div>
               </div>
-
-              <i class="fa-regular fa-copyright"></i> All rights reserved
-              <span><b>O.JB</b> </span>
+              <div style="color: black">
+                <i class="fa-regular fa-copyright"></i> All rights reserved
+                <span><b>O.JB</b> </span>
+              </div>
             </div>
             <div class="d-flex logos">
+              <div id="tel">
+                <a href="tel:+21255729011">(+212) 557-290-11</a>
+              </div>
               <div id="socials">
                 <a href="https://facebook.com" target="_blank"
                   ><i class="fa-brands fa-facebook"></i
