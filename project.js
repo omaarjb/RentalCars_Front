@@ -190,3 +190,17 @@ let calcScrollValue = () => {
 
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
+
+/************************************************** HIDE NAVBAR /SCROLL***************************************************/
+
+let navbar = document.getElementById("navbar");
+let end = 0;
+window.addEventListener("scroll", function () {
+  let scrollTop = window.pageXOffset || document.documentElement.scrollTop;
+  if (scrollTop > end) {
+    navbar.style.top = "-85px";
+  } else {
+    navbar.style.top = "0";
+  }
+  end = scrollTop;
+});

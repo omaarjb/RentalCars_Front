@@ -21,7 +21,7 @@
   </head>
   <body>
     <!--************************************************** NAVBAR **************************************************-->
-    <nav class="navbar navbar-expand-md py-3 fixed-top">
+    <nav id="navbar" class="navbar navbar-expand-md py-3 fixed-top">
       <div class="container">
         <a href="#"><img class="img" src="jeep.png" alt="" /></a>
 
@@ -341,7 +341,9 @@
                 to serving you and making your travel experience unforgettable!
               </p>
               <div class="text-center">
-                <a href="#" class="btn sign-in">Learn More</a>
+                <a href="learnMore.html" target="_blank" class="btn sign-in"
+                  >Learn More</a
+                >
               </div>
             </div>
           </div>
@@ -580,7 +582,7 @@
 
         <div class="form-box register">
           <h2>Registration</h2>
-          <form id="reg">
+          <form id="reg" onsubmit="return false">
             <div class="input-box">
               <span class="icon"><i class="fa-solid fa-user"></i></span>
               <input type="text" id="username" required />
