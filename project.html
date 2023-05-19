@@ -562,15 +562,12 @@
                 <input onclick="showPass()" type="checkbox" id="show" />
                 <label for="show">Show Password</label><br />
               </div>
-              <a href="/password-reset">Forgot Password ?</a>
+              <a onclick="forgot_pass()" href="/password-reset"
+                >Forgot Password ?</a
+              >
             </div>
             <span id="s4"></span>
-            <input
-              onclick="login_()"
-              type="submit"
-              value="Login"
-              class="logBtn"
-            />
+            <input type="submit" value="Login" class="logBtn" />
 
             <div class="login-register">
               <p>
@@ -606,6 +603,7 @@
               <label for="ConfirmPassword">Confirm Password</label>
               <span id="s2"></span>
             </div>
+            <br />
             <div class="remember-forgot">
               <div>
                 <input type="checkbox" id="check" />

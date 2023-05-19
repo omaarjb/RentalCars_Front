@@ -1,3 +1,119 @@
+/************************************************** LOGIN/REGISTER FORM **************************************************/
+
+const box = document.querySelector(".box");
+const loginLink = document.querySelector(".login-link");
+const registerLink = document.querySelector(".register-link");
+const login = document.querySelector(".btn.sign-in");
+const close = document.querySelector(".icon-close");
+
+registerLink.addEventListener("click", () => {
+  box.classList.add("active");
+});
+
+loginLink.addEventListener("click", () => {
+  box.classList.remove("active");
+});
+
+login.addEventListener("click", () => {
+  box.classList.add("active-btn");
+  window.scrollTo(0, 0);
+});
+
+close.addEventListener("click", () => {
+  box.classList.remove("active-btn");
+});
+
+/************************************************** SHOW PASS ***************************************************/
+
+function showPass() {
+  let pass = document.getElementById("password1");
+  if (pass.type == "text") {
+    pass.type = "password";
+  } else {
+    pass.type = "text";
+  }
+}
+
+/************************************************** USER / DATA***************************************************/
+
+let users = [];
+
+function add() {
+  let userValue = document.getElementById("username").value;
+  let emailValue = document.getElementById("email2").value;
+  let passValue1 = document.getElementById("password2").value;
+  let passValue2 = document.getElementById("ConfirmPassword").value;
+  let agree = document.getElementById("check");
+
+  if (passValue1.length < 8) {
+    document.getElementById("s1").innerHTML =
+      "Password must contain at least 8 characters";
+    return false;
+  } else {
+    document.getElementById("s1").innerHTML = "";
+  }
+
+  if (passValue1 !== passValue2) {
+    document.getElementById("s2").innerHTML = "Passwords do not match!";
+    return false;
+  } else {
+    document.getElementById("s2").innerHTML = "";
+  }
+
+  if (!agree.checked) {
+    document.getElementById("s3").innerHTML =
+      "Please agree to the terms and conditions";
+    return false;
+  } else {
+    document.getElementById("s3").innerHTML = "";
+  }
+
+  let user = {
+    email: emailValue,
+    password: passValue1,
+  };
+
+  users.push(user);
+
+  alert(
+    `Welcome, ${userValue}! Thanks for registering with us. We will send a confirmation email to ${emailValue}.`
+  );
+
+  console.log(users);
+  return false;
+}
+
+function login_() {
+  let emailValue = document.getElementById("email1").value;
+  let pass = document.getElementById("password1").value;
+
+  for (let i = 0; i < users.length; i++) {
+    if (emailValue == users[i].email && pass == users[i].password) {
+      alert(`Welcome, ${emailValue}!`);
+      return true;
+    }
+  }
+  document.getElementById("s4").innerHTML = "email and password do not match";
+  return false;
+}
+
+function forgot_pass() {
+  let emailValue = document.getElementById("email1").value;
+  let email = prompt("Enter your email address:");
+
+  while (emailValue != email) {
+    alert("Please enter a valid email address.");
+    email = prompt("Enter your email address:");
+  }
+
+  if (email) {
+    const message = `An email has been sent to ${email} with instructions on how to reset your password.`;
+    alert(message);
+  }
+
+  return false;
+}
+
 /************************************************** SCROLL **************************************************/
 
 const navMenu = document.querySelector("#nav-menu");
@@ -39,30 +155,6 @@ function switchTheme(e) {
 
 toggleSwitch.addEventListener("change", switchTheme, false);
 
-/************************************************** LOGIN/REGISTER FORM **************************************************/
-
-const box = document.querySelector(".box");
-const loginLink = document.querySelector(".login-link");
-const registerLink = document.querySelector(".register-link");
-const login = document.querySelector(".btn.sign-in");
-const close = document.querySelector(".icon-close");
-
-registerLink.addEventListener("click", () => {
-  box.classList.add("active");
-});
-
-loginLink.addEventListener("click", () => {
-  box.classList.remove("active");
-});
-
-login.addEventListener("click", () => {
-  box.classList.add("active-btn");
-  window.scrollTo(0, 0);
-});
-
-close.addEventListener("click", () => {
-  box.classList.remove("active-btn");
-});
 /************************************************** NEWSLETTER **************************************************/
 
 const form = document.getElementById("newsletter-form");
@@ -75,68 +167,6 @@ form.addEventListener("submit", function (event) {
   alert(`An email has been sent to ${email1}`);
   form.reset(); // clear the form
 });
-/************************************************** REGISTER **************************************************/
-/*const reg = document.getElementById("reg");
-reg.addEventListener("submit", function (event) {
-  event.preventDefault();
-  const username = document.querySelector("#username").value;
-  const email2 = document.querySelector("#email2").value;
-  const password = document.querySelector("#password2").value;
-  const confirmPassword = document.querySelector("#ConfirmPassword").value;
-  const agreeCheckbox = document.querySelector("#forgot2");
-
-  console.log("password: ", password);
-  console.log("confirmPassword: ", confirmPassword);
-
-  if (password.trim() !== confirmPassword.trim()) {
-    alert("Password and confirm password do not match. Please try again.");
-    return;
-  }
-
-  if (!agreeCheckbox.checked) {
-    alert("Please agree to the terms & conditions before registering.");
-    return;
-  }
-
-  alert(
-    `Welcome, ${username}! Thanks for registering with us. We'll send a confirmation email to ${email2}.`
-  );
-  event.target.reset();
-});*/
-
-/************************************************** LOGIN**************************************************/
-
-/*const log = document.getElementById("log");
-
-log.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const email3 = document.querySelector("#email1").value;
-  const password3 = document.querySelector("#password1").value;
-
-  const message = `Welcome, ${email3}!`;
-  alert(message);
-});
-
-const forgotPasswordLink = document.querySelector('a[href="/password-reset"]');
-const emailInput = document.getElementById("email1");
-
-forgotPasswordLink.addEventListener("click", function (event) {
-  event.preventDefault();
-
-  let email = prompt("Enter your email address:");
-
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  while (!emailRegex.test(email)) {
-    alert("Please enter a valid email address.");
-    email = prompt("Enter your email address:");
-  }
-
-  if (email) {
-    const message = `An email has been sent to ${email} with instructions on how to reset your password.`;
-    alert(message);
-  }
-});*/
 
 /************************************************** SCROLL PROGRESS ***************************************************/
 let calcScrollValue = () => {
@@ -160,62 +190,3 @@ let calcScrollValue = () => {
 
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
-
-/************************************************** SHOW PASS ***************************************************/
-
-function showPass() {
-  let pass = document.getElementById("password1");
-  if (pass.type == "text") {
-    pass.type = "password";
-  } else {
-    pass.type = "text";
-  }
-}
-
-/************************************************** USER / DATA***************************************************/
-
-let users = [];
-
-function add() {
-  let userValue = document.getElementById("username").value;
-  let emailValue = document.getElementById("email2").value;
-  let passValue1 = document.getElementById("password2").value;
-  let passValue2 = document.getElementById("ConfirmPassword").value;
-  let agree = document.getElementById("check");
-  if (passValue1.length < 8) {
-    document.getElementById("s1").innerHTML =
-      "Password must contains 8 characters";
-    return false;
-  } else if (passValue1 != passValue2) {
-    document.getElementById("s2").innerHTML = "Passwords not match !";
-    return false;
-  } else if (!check.checked) {
-    document.getElementById("s3").innerHTML =
-      "Please agree to terms and conditions";
-    return false;
-  } else {
-    let user = {};
-    user.email = emailValue;
-    user.password = passValue1;
-    users.push(user);
-    alert(
-      `Welcome, ${userValue}! Thanks for registering with us. We'll send a confirmation email to ${emailValue}.`
-    );
-  }
-  console.log(users);
-}
-
-function login_() {
-  let emailValue = document.getElementById("email1").value;
-  let pass = document.getElementById("password1").value;
-
-  for (let i = 0; i < users.length; i++) {
-    if (emailValue == users[i].email && pass == users[i].password) {
-      const message = `Welcome, ${emailValue}!`;
-      alert(message);
-      return true;
-    }
-  }
-  document.getElementById("s4").innerHTML = "email and password do not match";
-  return false;
-}

@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="container">
-      <form onsubmit="return openPop()" class="form">
+      <form onsubmit="return form_()" class="form">
         <h3>Complete this form</h3>
         <label for="phone"></label>
         <input
@@ -26,6 +26,7 @@
           required
         />
 
+        <span id="s1"></span>
         <label for="days"></label>
         <input
           type="number"
@@ -35,6 +36,7 @@
           required
         />
 
+        <span id="s2"></span>
         <label for="payment"></label>
         <select id="payment" name="payment" required>
           <option value="">Select Payment Method</option>
@@ -43,7 +45,8 @@
           <option value="cash">Cash</option>
         </select>
 
-        <button type="submit" onclick="openPop()">Rent Car</button>
+        <span id="s3"></span>
+        <button type="submit" onclick="form_()">Rent Car</button>
       </form>
       <div class="popup" id="popup">
         <img src="img/404-tick.png" alt="" />
