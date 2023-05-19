@@ -53,7 +53,7 @@ function add() {
     document.getElementById("s1").innerHTML = "";
   }
 
-  if (passValue1 !== passValue2) {
+  if (passValue1 != passValue2) {
     document.getElementById("s2").innerHTML = "Passwords do not match!";
     return false;
   } else {
