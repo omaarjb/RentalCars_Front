@@ -44,7 +44,6 @@ function add() {
   let passValue1 = document.getElementById("password2").value;
   let passValue2 = document.getElementById("ConfirmPassword").value;
   let agree = document.getElementById("check");
-
   if (passValue1.length < 8) {
     document.getElementById("s1").innerHTML =
       "Password must contain at least 8 characters";
@@ -74,10 +73,7 @@ function add() {
   };
 
   users.push(user);
-
-  alert(
-    `Welcome, ${userValue}! Thanks for registering with us. We will send a confirmation email to ${emailValue}.`
-  );
+  openPop_();
 
   console.log(users);
   return false;
@@ -89,8 +85,9 @@ function login_() {
 
   for (let i = 0; i < users.length; i++) {
     if (emailValue == users[i].email && pass == users[i].password) {
-      alert(`Welcome, ${emailValue}!`);
-      return true;
+      document.getElementById("s4").innerHTML = "";
+      openPop();
+      return false;
     }
   }
   document.getElementById("s4").innerHTML = "email and password do not match";
@@ -161,9 +158,6 @@ const form = document.getElementById("newsletter-form");
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   const email1 = form.querySelector('input[type="email"]').value;
-  // Send email to the user's email address
-  // ...
-  // Display a popup message
   alert(`An email has been sent to ${email1}`);
   form.reset(); // clear the form
 });
@@ -204,3 +198,32 @@ window.addEventListener("scroll", function () {
   }
   end = scrollTop;
 });
+
+/************************************************** HIDE LOGIN/POPUP***************************************************/
+
+let pop = document.getElementById("popup");
+let box_ = document.querySelector(".box");
+
+function openPop() {
+  pop.classList.add("open-pop");
+  box_.classList.add("hidden");
+}
+
+function closePop() {
+  pop.classList.remove("open-pop");
+  box_.classList.remove("hidden");
+}
+
+let pop_ = document.getElementById("popup2");
+
+function openPop_() {
+  pop_.classList.add("open-pop");
+  box_.classList.add("hidden");
+  document.getElementById("welcome").innerHTML =
+    "Confirmation email has been sent to your account";
+}
+
+function closePop_() {
+  pop_.classList.remove("open-pop");
+  box_.classList.remove("hidden");
+}
